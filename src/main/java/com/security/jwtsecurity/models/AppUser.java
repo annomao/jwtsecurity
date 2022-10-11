@@ -12,13 +12,12 @@ import java.util.Set;
                 @UniqueConstraint(columnNames = "username"),
                 @UniqueConstraint(columnNames = "email")
         })
-public class User {
+public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotBlank
     private String username;
-
     @NotBlank
     @Email
     private String email;
